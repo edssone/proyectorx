@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 200px;
+            background-color: #007acc;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #005580;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/readme">Leerme</a></li>
+        <li><a href="/explanation">Explicación del Problema</a></li>
+        <li><a href="/performance">Gráficas de Desempeño</a></li>
+        <li><a href="/prediction">Consumir Servicio de Predicción</a></li>
+        <li><a href="/solución">Explicación de la solución</a></li>
+    </ul>
+
+    <h1>Bienvenido a Mi Proyecto</h1>
+
+    <div class="content">
+        <!-- Sección: Matriz de Confusión -->
+        <section>
+            <img src="static/Confusion.png" alt="Matriz de Confusión">
+            <h2>Matriz de Confusión</h2>
+
+            <P>La matriz de confusión nos brinda una visión más detallada del desempeño del modelo al evaluar cada clase. Aquí está el análisis:<P></P>
+            <body>
+                <h2>Análisis de la Matriz de Confusión</h2>
+            
+                <div class="analysis-section">
+                    <h3>Sin Neumonía (Clase Normal):</h3>
+                    <p>Verdaderos Positivos (TP): 290 casos correctamente predichos como "Sin Neumonía".</p>
+                    <p>Falsos Negativos (FN): 18 casos de "Sin Neumonía" que fueron incorrectamente clasificados como "Neumonía".</p>
+                </div>
+            
+                <div class="analysis-section">
+                    <h3>Neumonía (Clase Positiva):</h3>
+                    <p>Verdaderos Positivos (TP): 817 casos correctamente predichos como "Neumonía".</p>
+                    <p>Falsos Negativos (FN): 43 casos de "Neumonía" que fueron incorrectamente clasificados como "Sin Neumonía".</p>
+                </div>
+            
+                <div class="analysis-section">
+                    <h3>Interpretación:</h3>
+                    <p>El modelo tiene un buen desempeño general, como se refleja en los altos valores de TP.</p>
+                    <p>En casos de "Sin Neumonía", hay relativamente pocos falsos negativos (18), lo que sugiere que el modelo es efectivo para identificar radiografías normales.</p>
+                    <p>En casos de "Neumonía", también hay relativamente pocos falsos negativos (43), indicando que el modelo es capaz de detectar la presencia de neumonía en gran medida.</p>
+                    <p>En general, la matriz de confusión respalda la conclusión de que el modelo es robusto y puede ser una herramienta útil para la detección de neumonía a partir de radiografías.</p>
+                </div>
+            </body>
+        </section>
+
+        <!-- Sección: Gráficas de Predicción -->
+        <section>
+            <img src="static/Desempeño.png" alt="Gráficas de Predicción">
+            <h2>Gráficas de Predicción</h2>
+            <body>
+                <h2>Gráficas del Modelo</h2>
+            
+                <div class="graph-section">
+                    <h3>Gráfica de Precisión durante el Entrenamiento</h3>
+                    
+                    <p>La gráfica muestra la precisión del modelo en el conjunto de entrenamiento y validación a lo largo de las épocas.</p>
+                </div>
+            
+                <div class="graph-section">
+                    <h3>Histograma de Confianza en las Predicciones</h3>
+                    
+                    <p>El histograma representa la distribución de la confianza en las predicciones para las clases "Sin Neumonía" y "Neumonía".</p>
+                </div>
+            </body>
+           
+        </section>
+
+        <!-- Sección: Reporte de Desempeño -->
+        <section>
+
+            <h2>Reporte de Desempeño</h2>
+            <P></P>Resultado del Modelo: 94.86% de Precisión<P></P>
+
+            <P>Este número representa qué tan acertadamente nuestro modelo puede predecir si una radiografía muestra signos de neumonía. En términos sencillos, el 94.86% de las veces, nuestro modelo hizo predicciones correctas.<P></P>
+            <body>
+                <h2>Resultado del Modelo: 94.86% de Precisión</h2>
+            
+                <div class="result-section">
+                    <p>Este número representa qué tan acertadamente nuestro modelo puede predecir si una radiografía muestra signos de neumonía. En términos sencillos, el 94.86% de las veces, nuestro modelo hizo predicciones correctas.</p>
+                </div>
+            
+                <div class="result-section">
+                    <h3>Informe de Métricas de Desempeño:</h3>
+            
+                    <div>
+                        <h3>Sin Neumonía (Clase Normal):</h3>
+                        <p>Precisión (Accuracy): 88% de las veces que el modelo predijo "Sin Neumonía", tenía razón.</p>
+                        <p>Sensibilidad (Recall): Logró identificar el 94% de los casos reales de "Sin Neumonía".</p>
+                        <p>F1-score: Un puntaje combinado de precisión y sensibilidad, dando un valor del 91%.</p>
+                    </div>
+            
+                    <div>
+                        <h3>Neumonía (Clase Positiva):</h3>
+                        <p>Precisión (Accuracy): 98% de las veces que el modelo predijo "Neumonía", acertó.</p>
+                        <p>Sensibilidad (Recall): Identificó correctamente el 95% de los casos reales de "Neumonía".</p>
+                        <p>F1-score: Un puntaje combinado de precisión y sensibilidad, dando un valor del 96%.</p>
+                    </div>
+            
+                    <p>Exactitud General (Accuracy): En general, el modelo acertó el 95% de las predicciones, considerando ambas clases.</p>
+                </div>
+            
+                <div class="result-section">
+                    <p>En resumen, estos resultados indican que el modelo tiene un alto nivel de precisión y es efectivo tanto para identificar casos de neumonía como para reconocer radiografías normales. Esto es prometedor para su posible utilidad como herramienta de apoyo en la detección de neumonía a partir de imágenes médicas.</p>
+                </div>
+            </body>
+            <p>Este es el comportamiento de las métricas del modelo.</p>
+            recisión del modelo: 94.86%
+        </p>Informe de Métricas de Desempeño:</p>
+    </p>precision    recall  f1-score   support</p>
+
+</p>Sin Neumonía       0.88      0.94      0.91       308</p>
+</p>Neumonía       0.98      0.95      0.96       860</p>
+
+</p> accuracy                           0.95      1168</p>
+</p>   macro avg       0.93      0.94      0.94      1168</p>
+</p>weighted avg       0.95      0.95      0.95      1168</p>
+        </section>
+    </div>
+
+    <!-- Volver al Home -->
+    <p><a href="/">Volver al Home</a></p>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6; /* Ajusta el espaciado entre líneas */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 200px;
+            background-color: #007acc;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #005580;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/readme">Leerme</a></li>
+        <li><a href="/explanation">Explicación del Problema</a></li>
+        <li><a href="/performance">Gráficas de Desempeño</a></li>
+        <li><a href="/prediction">Consumir Servicio de Predicción</a></li>
+        <li><a href="/solución">Explicación de la solución</a></li>
+    </ul>
+    
+    <body>
+    <h1>Bienvenido a Mi Proyecto</h1>
+
+    <div class="content">
+        <!-- Sección: Explicación del Problema -->
+        <section>
+            <img src="/static/RX1.jpeg" alt="Imagen de Rayos X" width="300">
+            <h2>Cómo lo solucionamos</h2>
+            <p>Título: Revolucionando el Diagnóstico Médico con Tecnología Innovadora
+
+                <h2> 1. Proceso para Resolver el Reto:<h2></h2>
+                En este proyecto, utilizamos un enfoque de ciencia de datos para abordar el reto de la detección de neumonía en imágenes de rayos X. El proceso consta de dos etapas principales: entrenamiento del modelo y predicción. Durante el entrenamiento, proporcionamos al modelo una amplia variedad de imágenes de rayos X previamente clasificadas como normales o con neumonía. El modelo aprende patrones y características distintivas de estas imágenes para realizar predicciones precisas más adelante. En la etapa de predicción, el modelo analiza una nueva imagen y determina si presenta signos de neumonía.
+            </p>
+        </p>
+        <h2>2. Principios y Elementos Fundamentales de los Modelos de Análisis de Imágenes y Predicción:<h2></h2>
+        El modelo se basa en principios de visión por computadora y aprendizaje profundo. Utilizamos técnicas de procesamiento de imágenes para preparar y normalizar los datos antes de alimentarlos al modelo. Además, incorporamos técnicas de transferencia de aprendizaje, que permiten al modelo aprovechar el conocimiento adquirido previamente en grandes conjuntos de datos.
+            </p>
+        </p>
+        <h2> 3. Red Neuronal y Red Neuronal Convolucional (CNN):<h2></h2>
+        En el ámbito de este proyecto, implementamos una red neuronal, que es un modelo computacional inspirado en la estructura y función del cerebro humano. Específicamente, optamos por una variante conocida como red neuronal convolucional (CNN). Las CNN son altamente eficientes en el procesamiento de datos de imágenes. Utilizan capas convolucionales para examinar patrones en la información visual, imitando la forma en que el ojo humano percibe detalles. Estas capas convolucionales aplican operaciones llamadas convoluciones, que son esencialmente filtros que destacan características relevantes, como bordes o texturas.
+    </p>
+    <h2>4. Beneficios Esperados con el Modelo:<h2></h2>
+</p>
+    La implementación de este modelo de ciencia de datos tiene el potencial de ofrecer beneficios significativos en el campo médico. Al proporcionar una herramienta de apoyo al diagnóstico, se espera agilizar y mejorar la precisión en la detección temprana de neumonía. Esto puede llevar a tratamientos más oportunos y eficaces, reduciendo la carga sobre los profesionales de la salud y mejorando los resultados para los pacientes.
+            </p>
+            </p>
+        </section>
+
+        <!-- Puedes agregar más secciones aquí -->
+
+    </div>
+</body>
+</html>

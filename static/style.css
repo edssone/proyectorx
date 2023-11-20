@@ -1,0 +1,27 @@
+body {
+    font-family: 'Verdana', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+    background-color: #f0f8ff; /* Un tono claro de azul (AliceBlue) */
+    color: #333; /* Color de texto oscuro */
+    line-height: 1.6;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Puedes agregar más estilos según tu preferencia */

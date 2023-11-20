@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente según tus preferencias */
+            background-color: #f0f8ff; /* Un tono claro de azul (AliceBlue) */
+            color: #333; /* Color de texto oscuro */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0; /* Añade espacio arriba y abajo del título */
+        }
+
+        /* Menú lateral */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 200px;
+            background-color: #007acc; /* Azul turquesa */
+            position: fixed; /* Fija el menú en la página */
+            height: 100%;
+            overflow: auto; /* Permite desplazarse en caso de que haya muchos elementos en el menú */
+        }
+
+        li a {
+            display: block;
+            color: #fff; /* Texto blanco */
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #005580; /* Un tono más oscuro al pasar el ratón */
+        }
+
+        /* Sección central */
+        .content {
+            margin-left: 220px; /* Alinea el contenido a la derecha del menú lateral */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a Mi Proyecto</h1>
+    
+    <!-- Menú lateral -->
+    <ul>
+        <li><a href="/readme">Leerme</a></li>
+        <li><a href="/explanation">Explicación del Problema</a></li>
+        <li><a href="/performance">Gráficas de Desempeño</a></li>
+        <li><a href="/prediction">Consumir Servicio de Predicción</a></li>
+        <li><a href="/solución">Explicación de la solución</a></li>
+    </ul>
+
+    <!-- Sección central -->
+    <div class="content">
+        <p>Esta es una iniciativa para aportar en los métodos diagnosticos de Neumonia</p>
+        <body>
+            <h1>Bienvenido al Proyecto de Detección de Neumonía</h1>
+        
+            <div class="intro-section">
+                <h2>Resolviendo un Desafío Médico con Tecnología</h2>
+                <p>Este proyecto utiliza avanzadas técnicas de inteligencia artificial para ayudar en la detección temprana de neumonía a partir de radiografías de tórax. Desarrollado por un equipo interdisciplinario de expertos en ciencia de datos y medicina, nuestro sistema proporciona una herramienta de apoyo valiosa para los profesionales médicos en la evaluación inicial de imágenes radiológicas.</p>
+            </div>
+        
+            <div class="intro-section">
+                <h2>¿Cómo Funciona?</h2>
+                <p>Nuestra solución se basa en una red neuronal convolucional entrenada con miles de imágenes médicas previamente validadas. Esta red es capaz de identificar patrones específicos asociados con la presencia de neumonía, permitiendo una clasificación precisa de las radiografías.</p>
+            </div>
+        
+            <div class="intro-section">
+                <h2>Aplicando Tecnología para Mejorar la Salud</h2>
+                <p>Buscamos ofrecer una herramienta tecnológica que, en combinación con la experiencia médica, agilice el proceso de diagnóstico y contribuya a un tratamiento más rápido y eficaz. Este proyecto es un paso hacia el futuro de la medicina, donde la tecnología y la salud trabajan juntas para mejorar la atención al paciente.</p>
+            </div>
+        </body>
+        <!-- Puedes agregar más contenido aquí -->
+    </div>
+</body>
+</html>

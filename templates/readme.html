@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 200px;
+            background-color: #007acc;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #005580;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a Mi Proyecto</h1>
+
+    <!-- Menú lateral -->
+    <ul>
+        <li><a href="/readme">Leerme</a></li>
+        <li><a href="/explanation">Explicación del Problema</a></li>
+        <li><a href="/performance">Gráficas de Desempeño</a></li>
+        <li><a href="/prediction">Consumir Servicio de Predicción</a></li>
+        <li><a href="/solución">Explicación de la solución</a></li>
+    </ul>
+
+    <!-- Sección central -->
+    <div class="content">
+        <p>Esta es una iniciativa para aportar en los métodos diagnósticos de Neumonía</p>
+        <div class="readme-section">
+            <h2>Descripción del Proyecto</h2>
+            <p>Bienvenido al repositorio de nuestro proyecto de detección de neumonía basado en inteligencia artificial. Este proyecto tiene como objetivo utilizar técnicas avanzadas de ciencia de datos e inteligencia artificial para ayudar en la detección temprana de neumonía a partir de radiografías de tórax.</p>
+        </div>
+
+        <div class="readme-section">
+            <h2>Características Principales</h2>
+            <ol>
+                <li>Utilización de una red neuronal convolucional (CNN) entrenada con miles de imágenes médicas validadas.</li>
+                <li>Interfaz web amigable para cargar y analizar radiografías de tórax.</li>
+                <li>Informes detallados de métricas de desempeño y análisis de resultados.</li>
+            </ol>
+        </div>
+
+        <div class="readme-section">
+            <h2>Instrucciones de Uso</h2>
+            <ol>
+                <li>Clona el repositorio en tu máquina local.</li>
+                <li>Configura el entorno virtual e instala las dependencias con <code>pip install -r requirements.txt</code>.</li>
+                <li>Ejecuta la aplicación con <code>uvicorn web.app:app --reload --port 8000</code>.</li>
+                <li>Accede a http://localhost:8000 desde tu navegador.</li>
+            </ol>
+        </div>
+
+        <div class="readme-section">
+            <h2>Contribuciones</h2>
+            <p>¡Contribuciones y sugerencias son bienvenidas! Si encuentras algún problema o tienes ideas para mejorar el proyecto, abre un problema o envía una solicitud de extracción.</p>
+        </div>
+
+        <div class="readme-section">
+            <h2>Licencia</h2>
+            <p>Este proyecto está bajo la Licencia MIT. Consulta el archivo <a href="LICENSE" target="_blank">LICENSE</a> para más detalles.</p>
+        </div>
+    </div>
+</body>
+</html>
+

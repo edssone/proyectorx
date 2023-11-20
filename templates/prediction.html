@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente según tus preferencias */
+            background-color: #f0f8ff; /* Un tono claro de azul (AliceBlue) */
+            color: #333; /* Color de texto oscuro */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0; /* Añade espacio arriba y abajo del título */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        /* Estilos para el formulario */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para la respuesta de la API */
+        .prediction-result {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nuevo Servicio de Predicción de Neumonía basado en interpretación de RX</h1>
+
+    <div class="container">
+        <div>
+            <img src="/static/RX1.jpeg" alt="Imagen de Rayos X" width="300">
+            <h2>Nuevo Servicio de Predicción de Neumonía basado en interpretación de RX</h2>
+        </div>
+
+        <div>
+            <h3>INSTRUCCIONES: Este servicio te permite predecir. Por favor carga aquí tu imagen de Rayos X.</h3>
+        </div>
+
+        <!-- Vínculo para regresar al home -->
+        <p><a href="/">Regresar al Home</a></p>
+
+        <form action="//127.0.0.1:8000/predecir/" method="post" enctype="multipart/form-data">
+            <label for="imagen">Subir imagen:</label>
+            <input type="file" name="imagen" accept="image/*">
+            <br>
+            <input type="submit" value="Predecir">
+        </form>
+
+        <!-- Sección para la respuesta de la API -->
+        <div class="prediction-result">
+            <p>Esta es la predicción que podemos realizar sobre la imagen:</p>
+            <!-- Aquí mostrar la respuesta del servicio -->
+        </div>
+    </div>
+
+    <!-- Puedes agregar más contenido aquí -->
+
+</body>
+</html>
