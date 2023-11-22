@@ -130,7 +130,7 @@ plt.show()
 
 #*****************Guardar el modelo ************
 # Guardar el modelo entrenado
-#modelo.save('modelo_rayos_x.h5')
+modelo.save('modelo_rayos_x.h5')
 
 # Supongamos que tienes una imagen llamada 'imagen_rayos_x.jpg'
 imagen_path = 'imagen_rayos_x.jpg'
